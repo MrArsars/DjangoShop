@@ -4,5 +4,6 @@ from shop.views import *
 
 urlpatterns = [
     path('', home),
-    path('register', register)
+    path('register', register),
+    path('login', login),
 ]
