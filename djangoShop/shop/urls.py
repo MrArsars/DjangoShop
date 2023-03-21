@@ -1,9 +1,9 @@
 from django.urls import path
+from allauth.account.views import LoginView
 
 from shop.views import *
 
 urlpatterns = [
-    path('', home),
-    path('register', register),
-    path('login', login),
+    path('home', home),
+    path('', LoginView.as_view()),
 ]
