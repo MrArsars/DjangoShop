@@ -25,6 +25,7 @@ from main import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop.urls')),
+    path('', include('inventory.urls')),
     path('accounts/', include('allauth.urls')),
 ]
 
