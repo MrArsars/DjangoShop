@@ -2,4 +2,24 @@
 
 {% block title %} Home page {% endblock %}
 
-{% block content %} <h1>Inventory page</h1> {% endblock %}
+{% block content %}
+
+<div class="inventory">
+{% for product in products %}
+    <div class="product-container">
+        <div class="product-image" style='background-image: url("../../../media/{{product.image}}")'>
+        </div>
+        <div class="product-desc">
+            <div class="product-name">
+                <label>{{product.name}}</label>
+            </div>
+            <div class="product-price">
+                <label>{{product.price}}₴</label>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+
+{% endblock %}

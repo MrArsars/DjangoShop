@@ -4,6 +4,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from inventory.views import *
 
 urlpatterns = [
-    path('inventory', inventory),
+    path('', inventory),
 ]
 urlpatterns += staticfiles_urlpatterns()

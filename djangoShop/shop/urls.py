@@ -1,10 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 from allauth.account.views import LoginView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from shop.views import *
 
 urlpatterns = [
-    path('home', home),
-    path('', LoginView.as_view()),
+    #path('', LoginView.as_view()),
+    path("", include("allauth.account.urls"))
 ]
 urlpatterns += staticfiles_urlpatterns()
