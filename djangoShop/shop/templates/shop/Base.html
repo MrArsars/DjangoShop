@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
 <div class="header-container">
     <div class="header-content">
+
         <h2>LOGO</h2>
-        {% if user.is_authenticated %}
-        <a href="/accounts/logout">Logout</a>
-        {% else %}
-        <a href="/login">Login</a>
+        {% if request.path != '/login/' %}
+            {% if user.is_authenticated %}
+            <a href="/logout">Logout</a>
+            {% else %}
+            <a href="/login">Login</a>
+            {% endif %}
         {% endif %}
     </div>
 </div>
