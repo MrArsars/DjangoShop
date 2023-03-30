@@ -1,0 +1,138 @@
+.login{
+    display: flex;
+    border-radius: 10px;
+    height: fit-content;
+    margin: auto;
+    flex-direction: column;
+    padding: 60px;
+    box-shadow: 0 0 20px 5px rgba(224,224,224,1);
+
+    background-color: #d1cdcd;
+}
+
+.login p{
+    display: flex;
+    flex-direction: column;
+}
+
+.login p:nth-of-type(3){
+    display: none;
+}
+
+
+.login input{
+    border: none;
+    background-color: #d1cdcd !important;
+    min-width: 15vw;
+    font-size: large;
+    margin-top: 0.5rem;
+}
+
+.login input:focus{
+    border: none;
+    outline: none;
+}
+
+.login p:nth-of-type(1){
+    border-bottom: 1px solid gray;
+}
+
+.login p:nth-of-type(2){
+    border-bottom: 1px solid gray;
+}
+
+.login p:nth-of-type(1):after{
+    display: block;
+    border-bottom:  2px #221f1f solid;
+    content: '';
+    transform: scaleX(0);
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+}
+
+.login p:nth-of-type(2):after{
+    display: block;
+    border-bottom:  2px #221f1f solid;
+    content: '';
+    transform: scaleX(0);
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+}
+
+.login p:nth-of-type(1):hover:after{
+    transform: scaleX(1);
+}
+
+.login p:nth-of-type(2):hover:after{
+    transform: scaleX(1);
+}
+
+
+.login p:nth-of-type(4){
+    text-align: center;
+}
+
+.login p:nth-of-type(4) a{
+    color: black;
+    text-decoration: underline;
+}
+
+.login p:nth-of-type(5){
+    text-align: center;
+}
+
+.login-header{
+    margin-bottom: 1rem;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login button{
+    margin-top: 1rem;
+    border: none;
+    background-color: #221f1f;
+    height: 3rem;
+    color: wheat;
+    font-size: large;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login button:hover{
+    transform: scale(1.05);
+}
+
+.socialaccount_ballot{
+    justify-content: center;
+    display: flex;
+}
+
+.socialaccount_providers{
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    width: fit-content;
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.socialaccount_providers:hover{
+    transform: scale(1.02);
+}
+
+.socialaccount_providers img{
+    margin-right: .5rem;
+}
+
+.socialaccount_provider{
+    color: black;
+}
