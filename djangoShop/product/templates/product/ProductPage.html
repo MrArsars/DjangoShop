@@ -13,10 +13,27 @@
         <div class="product-img">
             <img src="{% get_media_prefix %}/{{product.image}}">
         </div>
-        <div class="product-actions-container">
-            <button>buy</button>
+        <div class="product-main">
+            <div class="product-actions-container {% if product.amount < 1 %}out{% endif %}">
+                <div class="product-price">
+                    <div class="price">{{product.price}}₴</div>
+                    <div class="amount">
+                        {% if product.amount < 1 %}
+                            Out of stock
+                        {% else %}
+                            Available
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="addtocart-button"><i class="icon-shopping-cart"></i>Add to cart</div>
+            </div>
+            <div class="product-about">
+                {{product.description}}
+            </div>
         </div>
+
     </div>
+
 </div>
 
 {% endblock %}

@@ -21,9 +21,26 @@ select:-webkit-autofill:focus {
     border: none;
 }
 
-.content{
-    overflow-x: hidden;
-    overflow-y: scroll;
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .main-container{
@@ -31,6 +48,7 @@ select:-webkit-autofill:focus {
     width: 100%;
     margin: 0 auto;
     height: calc(100vh - 70px);
+    overflow-y: scroll;
     display: flex;
 }
 
@@ -57,4 +75,10 @@ select:-webkit-autofill:focus {
 a{
     color: wheat;
     text-decoration: none;
+}
+
+@media (min-width: 1600px) {
+    .header-content{
+        padding: 0 2rem;
+    }
 }

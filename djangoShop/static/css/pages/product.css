@@ -1,5 +1,7 @@
 .product-page-container{
     width: 100%;
+    height: fit-content;
+    margin: 3rem 0;
 }
 
 .product-block{
@@ -11,16 +13,66 @@
 .product-title{
     font-size: 30px;
     line-height: 43px;
-    margin-top: 3rem;
+}
+
+.product-main{
+    width: 50%;
+}
+
+.product-block .product-main .product-about{
+    margin-top: 1rem;
 }
 
 .product-actions-container{
-    width: 50%;
     border: white 1px solid;
     border-radius: 10px;
     box-shadow: 0 0 20px 5px rgba(224,224,224,1);
-    justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 20px;
+}
+
+.product-page-container .product-price .price{
+    font-size: x-large;
+    color: red;
+}
+
+.product-page-container .out{
+    color: gray;
+}
+
+.product-page-container .out .product-price .price{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.addtocart-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: #221f1f;
+    color: wheat;
+    font-size: large;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.addtocart-button:hover{
+    transform: scale(1.05);
+}
+
+.addtocart-button i{
+    margin-right: .5rem;
+}
+
+@media (min-width: 1600px) {
+    .product-page-container{
+        margin: 3rem 2rem;
+    }
 }
