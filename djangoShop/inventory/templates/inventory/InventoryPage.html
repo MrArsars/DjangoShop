@@ -1,5 +1,5 @@
 {% extends 'shop/Base.html' %}
-
+{% load static %}
 {% block title %} Home page {% endblock %}
 
 {% block content %}
@@ -7,7 +7,7 @@
 <div class="inventory">
 {% for product in products %}
     <div class="product-container" onclick="location.href='/product/{{product.pk}}'">
-        <div class="product-image" style='background-image: url("../../../media/{{product.image}}")'>
+        <div class="product-image" style='background-image: url("{% get_media_prefix %}/{{product.image}}")'>
         </div>
         <div class="product-desc">
             <div class="product-name">

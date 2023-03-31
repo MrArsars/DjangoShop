@@ -1,5 +1,26 @@
-.product-name{
+.product-page-container{
+    width: 100%;
+}
+
+.product-block{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.product-title{
     font-size: 30px;
     line-height: 43px;
     margin-top: 3rem;
+}
+
+.product-actions-container{
+    width: 50%;
+    border: white 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(224,224,224,1);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
