@@ -25,7 +25,11 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="addtocart-button"><i class="icon-shopping-cart"></i>Add to cart</div>
+                <form method="post">
+                    <button type="submit" class="addtocart-button">
+                        <i class="icon-shopping-cart"></i>Add to cart
+                    </button>
+                </form>
             </div>
             <div class="product-about">
                 {{product.description}}
