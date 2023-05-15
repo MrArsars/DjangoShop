@@ -4,10 +4,14 @@
 
 {% block content %}
 
-{% for item in cartItems %}
+<div class="cart-container">
 
-<h1>{{item.name}}</h1>
+    {% for item in cartItems %}
 
-{% endfor %}
+    <h1>{{item.name}}</h1>
+
+    {% endfor %}
+
+</div>
 
 {% endblock %}
